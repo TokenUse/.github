@@ -5,12 +5,12 @@
 <h1 align="center">TokenUse</h1>
 
 <p align="center">
-  Unified LLM usage + cost tracking across providers.
+  Unified LLM usage + cost tracking across coding agents and providers.
 </p>
 
 <p align="center">
   <img alt="CLI-first" src="https://img.shields.io/badge/CLI-first-111111?style=flat" />
-  <img alt="Multi-provider" src="https://img.shields.io/badge/Multi--provider-111111?style=flat" />
+  <img alt="Claude, Code, Cursor" src="https://img.shields.io/badge/Claude%20%2B%20Code%20%2B%20Cursor-111111?style=flat" />
   <img alt="Project attribution" src="https://img.shields.io/badge/Project%20attribution-111111?style=flat" />
   <img alt="Daily reporting" src="https://img.shields.io/badge/Daily%20reporting-111111?style=flat" />
 </p>
@@ -31,7 +31,7 @@
 
 ## What it is
 
-**A CLI-first usage tracker** with an **optional dashboard** for LLM APIs.  
+**A CLI-first usage tracker** with an **optional dashboard** for AI coding tools and LLM APIs.  
 Built for complete coverage without slowing developers down.
 
 TokenUse takes the best parts of modern observability tools:
@@ -47,15 +47,23 @@ TokenUse takes the best parts of modern observability tools:
 - **Attribution:** by project, environment, model, key
 - **Budgets:** soft alerts + hard stops (optional)
 - **Exports:** CSV / JSON for reporting
-- **Comparable metrics:** one schema across providers
+- **Comparable metrics:** one schema across agents and providers
 
 ---
 
-## Providers (direction)
+## Supported sources today
+
+- **Claude Code:** local session log tracking
+- **OpenAI Codex / code sessions:** local session log tracking
+- **Cursor:** local environment detection and source status support
+
+---
+
+## Provider integration roadmap
 
 - Anthropic
-- OpenAI (Coming Soon)
-- Gemini (Coming soon)
+- OpenAI
+- Gemini
 
 ---
 
@@ -63,6 +71,6 @@ TokenUse takes the best parts of modern observability tools:
 
 ```text
 1) Configure keys + project mapping
-2) Collect usage events
-3) Normalize tokens + cost across providers
+2) Collect usage events from Claude Code, Codex, Cursor, or provider integrations
+3) Normalize tokens + cost across agents and providers
 4) Query locally (CLI) or publish to the dashboard
